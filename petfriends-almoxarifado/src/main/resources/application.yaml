@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: PetFriends Almoxarifado
+
+  cloud:
+    stream:
+      bindings:
+        pedidoStatusInput:
+          destination: pedido-status
+        bindings:
+          pedidoStatusInput:
+            group: almoxarifado-group
+          novoStatusOutput:
+            destination: pedido-status

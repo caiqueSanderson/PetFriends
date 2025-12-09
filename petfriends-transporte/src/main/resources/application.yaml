@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: petfriends-transporte
+
+  cloud:
+    stream:
+      bindings:
+        pedidoStatusInput:
+          destination: pedido-status
+          group: transporte-group
+          content-type: application/json
+
+        novoStatusOutput:
+          destination: pedido-status
+          content-type: application/json
